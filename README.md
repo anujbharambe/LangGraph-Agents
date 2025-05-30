@@ -9,8 +9,8 @@ These projects delve into building complex AI agents using LangGraph, integratin
 - **Objective**: Develop an AI agent capable of handling customer queries.
 - **Key Features**: Natural language understanding, FAQ retrieval, escalation handling.
 
-### 2. Stock Trading Bot
-- **Objective**: Create an agent that analyzes stock data and makes trade decisions.
+### 2. Document Analysis Bot
+- **Objective**: Create an agent that analyzes data in docs and replies to queries based on it.
 - **Key Features**: Data fetching from financial APIs, decision algorithms, portfolio management.
 
 ### 3. Personal Assistant
