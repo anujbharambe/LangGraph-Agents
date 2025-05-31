@@ -32,8 +32,6 @@ LangGraph-Agents/
 └── RAG_Agent.py
 
 bash
-Copy
-Edit
 
 ## 🚀 How to Run
 
@@ -50,8 +48,7 @@ pip install -r requirements.txt
 Run an agent:
 
 bash
-Copy
-Edit
+
 python Memory_Bot.py
 🔧 Requirements
 Python 3.8+
