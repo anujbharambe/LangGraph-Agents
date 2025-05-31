@@ -75,6 +75,6 @@ Email and content drafting assistants
 
 📺 Tutorial Reference
 This work is based on the walkthrough presented in the YouTube video by LangChain:
-Watch the video
+https://www.youtube.com/watch?v=jGg_1h0qzaM&t=10351s
 
 
