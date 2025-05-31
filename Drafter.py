@@ -1,11 +1,12 @@
 from typing import Annotated, Sequence, TypedDict
 from dotenv import load_dotenv
-from langchain_core.messages import BaseMessage, ToolMessage, SystemMessage, HumanMessage
+from langchain_core.messages import BaseMessage, ToolMessage, SystemMessage, HumanMessage, AIMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.tools import tool
 from langgraph.graph.message import add_messages
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolNode
+import os
 
 load_dotenv()
 
@@ -38,7 +39,8 @@ def save(filename: str) -> str:
 
 tools = [update, save]
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001").bind_tools(tools)
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash",google_api_key=os.environ["GOOGLE_API_KEY"])
+
 
 def process(state: AgentState) -> AgentState:
     system_prompt = SystemMessage(content=f""" 
@@ -49,7 +51,7 @@ def process(state: AgentState) -> AgentState:
     - Make sure to always show the current document state after modifications.
 
     The current document content is: {document_content}
-    """)
+    """) 
     
     if not state["messages"]:
         user_input = "I'm ready to help you update a document. What would you like to create?"
